@@ -7,16 +7,20 @@
     "agent-convert": "./bin/agent-convert.js"
   },
   "scripts": {
-    "build": "bun build convert.ts --outfile bin/agent-convert.js --target bun && sed -i '1s|.*|#!/usr/bin/env bun|' bin/agent-convert.js && chmod +x bin/agent-convert.js",
-    "prepublishOnly": "npm run build"
+    "build": "bun build convert.ts --outfile bin/agent-convert.js --target bun && sed -i '1s|.*|#!/usr/bin/env bun|' bin/agent-convert.js && chmod +x bin/agent-convert.js"
   },
-  "keywords": ["claude", "copilot", "session", "converter", "cli"],
+  "keywords": ["claude", "copilot", "session", "converter", "cli", "agent"],
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MiniGod/agent-convert.git"
+  },
   "engines": {
     "bun": ">=1.0"
   },
   "files": [
     "bin/",
-    "convert.ts"
+    "convert.ts",
+    "README.md"
   ]
 }
