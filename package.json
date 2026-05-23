@@ -7,14 +7,26 @@
     "agent-convert": "./bin/agent-convert.js"
   },
   "scripts": {
-    "build": "bun build convert.ts --outfile bin/agent-convert.js --target bun && sed -i '1s|.*|#!/usr/bin/env bun|' bin/agent-convert.js && chmod +x bin/agent-convert.js"
+    "build": "bun build convert.ts --outfile bin/agent-convert.js --target bun && sed -i '1s|.*|#!/usr/bin/env bun|' bin/agent-convert.js && chmod +x bin/agent-convert.js",
+    "prepare": "husky"
   },
-  "keywords": ["claude", "copilot", "session", "converter", "cli", "agent"],
+  "keywords": [
+    "claude",
+    "copilot",
+    "session",
+    "converter",
+    "cli",
+    "agent"
+  ],
   "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/MiniGod/agent-convert.git"
   },
+  "bugs": {
+    "url": "https://github.com/MiniGod/agent-convert/issues"
+  },
+  "homepage": "https://github.com/MiniGod/agent-convert#readme",
   "engines": {
     "bun": ">=1.0"
   },
@@ -22,5 +34,10 @@
     "bin/",
     "convert.ts",
     "README.md"
-  ]
+  ],
+  "devDependencies": {
+    "@commitlint/cli": "^21.0.1",
+    "@commitlint/config-conventional": "^21.0.1",
+    "husky": "^9.1.7"
+  }
 }
