@@ -1,0 +1,22 @@
+{
+  "name": "agent-convert",
+  "version": "0.1.0",
+  "description": "Convert sessions between Claude Code and Copilot CLI",
+  "type": "module",
+  "bin": {
+    "agent-convert": "./bin/agent-convert.js"
+  },
+  "scripts": {
+    "build": "bun build convert.ts --outfile bin/agent-convert.js --target bun && sed -i '1s|.*|#!/usr/bin/env bun|' bin/agent-convert.js && chmod +x bin/agent-convert.js",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": ["claude", "copilot", "session", "converter", "cli"],
+  "license": "MIT",
+  "engines": {
+    "bun": ">=1.0"
+  },
+  "files": [
+    "bin/",
+    "convert.ts"
+  ]
+}
