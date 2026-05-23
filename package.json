@@ -1,6 +1,6 @@
 {
   "name": "agent-convert",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Convert sessions between Claude Code and Copilot CLI",
   "type": "module",
   "bin": {
